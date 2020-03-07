@@ -2,8 +2,10 @@ flask
 pony
 # for pony and mysql
 pymysql
+cryptography
 redis
 python-dotenv
+
 # only for development
 # python-language-server
 # pyls-black

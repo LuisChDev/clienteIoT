@@ -1,8 +1,10 @@
 FROM python:3.7.6-alpine3.11
 
-### takes a long time. Be careful
-# RUN apt update && apt install -y python3-pip python-dev \
-#     mysql-server redis-server
+RUN apk add gcc
+RUN apk add linux-headers
+RUN apk add libc-dev
+RUN apk add libffi-dev
+RUN apk add openssl-dev
 
 ENV FLASK_RUN_HOST 0.0.0.0
 

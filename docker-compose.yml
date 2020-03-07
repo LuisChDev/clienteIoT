@@ -6,12 +6,16 @@ services:
      - "6379:6379"
   db:
     image: mysql
+    restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: abc123
+      MYSQL_ROOT_PASSWORD: dinero
       MYSQL_DATABASE: clienteIoT
     ports:
      - "3306:3306"
   web:
+    depends_on:
+      - redis
+      - db
     build: .
     ports:
       - "80:80"

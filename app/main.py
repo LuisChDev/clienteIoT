@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template
 from datetime import datetime
 
-# from .sql import insert_temp as ins_tempS
+from .sql import insert_temp as ins_tempS
 from .redis import insert_temp as ins_tempR
 
 app = Flask(__name__)
@@ -21,7 +21,7 @@ def index():
         ins_tempR(tmsp=stamp, tmp=tempr, rcd=now)
 
         # agregando a mysql
-        # ins_tempS(tmsp=stamp, tmp=tempr, rcd=now)
+        ins_tempS(tmsp=stamp, tmp=tempr, rcd=now)
 
         print(request.json)
         return render_template('success.html', tempr=tempr, stamp=stamp, now=now)
