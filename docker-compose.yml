@@ -4,6 +4,8 @@ services:
     image: redis
   db:
     image: mysql
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
   web:
     build: .
     ports:
