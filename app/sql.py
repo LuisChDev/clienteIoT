@@ -8,7 +8,7 @@ class TempRecord(myDb.Entity):
     temperature = orm.Required(float)
     recorded = orm.PrimaryKey(datetime)
 
-myDb.bind(provider='mysql', user='mysql', db='clienteIoT', passwd='')
+myDb.bind(provider='mysql', user='root', db='clienteIoT', passwd='dinero')
 myDb.generate_mapping(create_tables=True)
 
 # saves to database
