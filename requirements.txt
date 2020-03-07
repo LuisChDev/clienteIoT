@@ -1,0 +1,11 @@
+flask
+pony
+# for pony and mysql
+pymysql
+redis
+python-dotenv
+# only for development
+# python-language-server
+# pyls-black
+# pyls-mypy
+# flake8
