@@ -6,7 +6,9 @@ RUN apk add libc-dev
 RUN apk add libffi-dev
 RUN apk add openssl-dev
 
+ENV FLASK_ENV development
 ENV FLASK_RUN_HOST 0.0.0.0
+ENV FLASK_RUN_PORT 80
 
 COPY . /project
 
